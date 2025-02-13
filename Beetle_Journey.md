@@ -1,46 +1,38 @@
-🐞 Beetle Journey - TCS CodeVita PYQ 🚀
+# 🐞 Beetle Journey - TCS CodeVita PYQ 🚀
 
-📌 Problem Statement
-
+## 📌 Problem Statement
 A beetle moves in a 3D space following a set of coordinates. Your task is to calculate the total distance traveled by the beetle. If the movement is on the same z level (z1 == z2 and z2 != 0), then a curved motion is considered.
 
-🏗️ Input Format
+## 🏗️ Input Format
+- The first line contains an integer `n`, the number of points.
+- The second line contains `n` space-separated 3D coordinates `(x y z)`, separated by commas.
 
-The first line contains an integer n, the number of points.
-
-The second line contains n space-separated 3D coordinates (x y z), separated by commas.
-
-🎯 Output Format
-
+## 🎯 Output Format
 Print the total distance traveled, rounded to two decimal places.
 
-🔢 Example
-
-Input:
-
+## 🔢 Example
+**Input:**
+```
 4
 0 0 0, 3 0 0, 6 0 3, 9 0 3
+```
 
-Output:
-
+**Output:**
+```
 12.14
+```
 
-🚀 Approach
+## 🚀 Approach
+1. Read input values and parse them correctly.
+2. Store the coordinates as `Point` objects.
+3. Calculate the distance between consecutive points:
+   - If `z1 == z2` and `z2 != 0`, use a curved distance formula.
+   - Otherwise, compute the Manhattan distance.
+4. Sum all distances and print the result rounded to two decimal places.
 
-Read input values and parse them correctly.
+## 🛠️ Implementation (Java Solution)
 
-Calculate the distance between consecutive points.
-
-If z1 == z2 and z2 != 0, use a curved distance formula.
-
-Otherwise, compute Manhattan distance.
-
-Sum all distances and print the result rounded to two decimal places.
-
-🛠️ Implementation
-
-Java Solution
-
+```java
 import java.util.*;
 public class BeetleJourney {
     public static class Point {
@@ -71,17 +63,16 @@ public class BeetleJourney {
         System.out.printf("%.2f\n", totalDistance);
     }
 }
+```
 
-🏆 Challenge
+## 🏆 Challenge
+- Optimize your approach for large inputs!
+- Implement in different programming languages!
 
-Optimize your approach for large inputs!
-
-Implement in different programming languages!
-
-📌 Contribute
-
+## 📌 Contribute
 If you have a better approach or an optimized solution, feel free to create a pull request! 🎯
 
 Happy Coding! 🚀
 
+---
 #TCSCodeVita #Java #Python #CodingChallenge #InterviewPreparation
